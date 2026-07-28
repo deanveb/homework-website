@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <title>Gradient</title>
+</head>
+
+<!-- Hide the hash -->
+
+<body>
+  <script src="https://asciinema.org/a/sXtNAHhohlt9bnGy.js" id="asciicast-sXtNAHhohlt9bnGy" async="true"></script>
+  <md-block>
+    # Gradient
+    ![example](./image.png)
+
+    ---
+
+    ## Nhiệm Vụ
+
+    ---
+
+    Dựa vào bài vuông xiên của tuần trước hãy tạo ra 1 hình có kích thước 800x800 với các đặc điểm:
+    + Mỗi một số trong mảng kết quả vuông xiên sẽ có 1 màu khác nhau
+    + Màu gốc ở ô mã số 1 là #1000f0
+    + Màu đỏ của các ô tiếp theo sẽ lớn hơn màu đỏ số thứ tự trước #000010 (vd: giá trị màu đỏ ở ô số 2 sẽ lớn hơn màu
+    đỏ ở ô 1 #000010)
+
+    **Điều Kiện**:
+
+    - Nếu người dùng nhập sai cách dùng thoát chương trình với exit code 1 (Usage:...)
+    - Phải in ra hash của sha256sum
+    - Kích thước phải là 800x800
+    - Tên tệp bắt buộc phải là image.ppm
+    - Nếu không tạo được file thì thoát ra với lỗi 1
+    - kích thước của ô vuông vuong-xien có kích thước 5
+
+    **Nhắc Lại**:
+
+    - Mỗi string đều kết thúc với nul
+    - Phải giải phóng hết vùng nhớ (dùng valgrind để kiểm tra)
+    - sha256sum là 1 lệnh của linux dùng để in ra kết quả hash của 1 file lên màn hình
+    - định dạng tệp ppm([chi tiết](https://www.cs.swarthmore.edu/~soni/cs35/f13/Labs/extras/01/ppm_info.html)):
+    1. Format ảnh: P6(nhị phân), P3(ghi chữ ascii) ở bài này ta sử dụng P6
+    2. Kích thước hình ảnh: 800x600
+    3. Kích thước của màu tối đa: 255 các màu đỏ/xanh/xanh có giá trị từ 0 đến 255
+    4. Thông tin của ảnh: giá trị màu rgb trong ascii(P3)/nhị phân(P6) của ảnh (255 255 255 -> 1 điểm ảnh màu trắng)
+
+    - 1 hình kích thước 800x600 có 2 điểm ảnh màu đỏ liền kề:\
+    P3\
+    800 600\
+    255\
+    255 0 0 255 0 0
+
+    ## Để bắt đầu
+
+    ---
+
+    Đánh vào terminal như sau:\
+    `$ mkdir gradient`\
+    `$ cd gradient`\
+    `$ code gradient.c`
+
+    ## Để chạy thử chương trình
+
+    ---
+
+    ` $ make gradient `\
+    ` $ ./gradient `
+
+    ## Để kiểm tra tính chính xác
+
+    ---
+
+    `$ check50 deanveb/HomeWork/main/week4/gradient`
+  </md-block>
+</body>
+
+</html>

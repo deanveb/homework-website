@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <title>Sọc</title>
+</head>
+
+<body>
+  <script src="https://asciinema.org/a/LggVTQpZKHChSF1o.js" id="asciicast-LggVTQpZKHChSF1o" async="true"></script>
+  <!-- TODO: Hide the hash -->
+  <md-block>
+    # Sọc
+    ![example](./image.png)
+
+    ---
+
+    ## Nhiệm Vụ
+
+    ---
+
+    Sử dụng định dạng ppm tạo ra 1 hình ảnh 800x600 có nền sọc 5 dòng và có màu đỏ và xanh như hình trên
+
+    **Điều Kiện**:
+
+    - Kích thước phải là 800x600
+    - Tên tệp bắt buộc phải là image.ppm
+    - Phải in ra hash của sha256sum
+    - Nếu file không tạo thành công thoát chương trình với exit code 1
+
+    **Nhắc Lại**:
+
+    - Mỗi string đều kết thúc với nul
+    - Phải giải phóng hết vùng nhớ (dùng valgrind để kiểm tra)
+    - sha256sum là 1 lệnh của linux dùng để in ra kết quả hash của 1 file lên màn hình
+    - định dạng tệp ppm([chi tiết](https://www.cs.swarthmore.edu/~soni/cs35/f13/Labs/extras/01/ppm_info.html)):
+    1. Format ảnh: P6(nhị phân), P3(ghi chữ ascii) ở bài này ta sử dụng P6
+    2. Kích thước hình ảnh: 800x600
+    3. Kích thước của màu tối đa: 255 các màu đỏ/xanh/xanh có giá trị từ 0 đến 255
+    4. Thông tin của ảnh: giá trị màu rgb trong ascii(P3)/nhị phân(P6) của ảnh (255 255 255 -> 1 điểm ảnh màu trắng)
+
+    1 hình kích thước 800x600 có 2 điểm ảnh màu đỏ liền kề:\
+    P3\
+    800 600\
+    255\
+    255 0 0 255 0 0
+
+    ## Để bắt đầu
+
+    ---
+
+    Đánh vào terminal như sau:\
+    `$ mkdir stripe`\
+    `$ cd stripe`\
+    `$ code stripe.c`
+    #### Nhắc Lại
+    **`mkdir`** ( hay make directory ) được sử dụng để tạo thư mục\
+    **`cd`** ( hay change directory ) được sử dụng để chuyển thư mục hiện tại sang thư mục khác
+
+    ## Để chạy thử chương trình
+
+    ---
+
+    ` $ make stripe `\
+    ` $ ./stripe `
+    ## Nhắc Lại
+    **`make`** là một trong những công cụ được sử dụng để chuyển (hay biên dịch) mã c sang mã nhị phân\
+    Có thể sử dụng **`ls`** để xem trong thư mục hiện tại có file/folder gì
+
+    ## Để kiểm tra tính chính xác
+
+    ---
+
+    `$ check50 deanveb/HomeWork/main/week4/stripe`
+  </md-block>
+</body>
+
+</html>

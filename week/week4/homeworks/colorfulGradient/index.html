@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <title>Nền Đỏ</title>
+</head>
+
+<body>
+  <script src="https://asciinema.org/a/MbNCEoGAXt4xUwlc.js" id="asciicast-MbNCEoGAXt4xUwlc" async="true"></script>
+  <md-block>
+    # Nền Đỏ
+    ![example](./image.png)
+
+    ---
+
+    ## Nhiệm Vụ
+
+    ---
+
+    Sử dụng định dạng ppm để tạo ra 1 hình ảnh 800x600 có nền đỏ
+
+    **Điều Kiện**:
+
+    - Nếu người dùng nhập sai cách dùng thoát chương trình với exit code 1 (Usage:...)
+    - Kích thước phải là 800x600
+    - Tên tệp bắt buộc phải là image.ppm
+    - Phải in ra hash của sha256sum
+    - Nếu file không tạo thành công thoát chương trình với exit code 1
+
+    **Nhắc Lại**:
+
+    - Mỗi string đều kết thúc với nul
+    - Phải giải phóng hết vùng nhớ (dùng valgrind để kiểm tra)
+
+    ## Để bắt đầu
+
+    ---
+
+    Đánh vào terminal như sau:\
+    `$ mkdir redBackground`\
+    `$ cd redBackground`\
+    `$ code redBackground.c`
+    #### Nhắc Lại
+    **`mkdir`** ( hay make directory ) được sử dụng để tạo thư mục\
+    **`cd`** ( hay change directory ) được sử dụng để chuyển thư mục hiện tại sang thư mục khác
+
+    ## Để chạy thử chương trình
+
+    ---
+
+    ` $ make redBackground `\
+    ` $ ./redBackground `
+    ## Nhắc Lại
+    **`make`** là một trong những công cụ được sử dụng để chuyển (hay biên dịch) mã c sang mã nhị phân\
+    Có thể sử dụng **`ls`** để xem trong thư mục hiện tại có file/folder gì
+
+    ## Để kiểm tra tính chính xác
+
+    ---
+
+    `$ check50 deanveb/HomeWork/main/week4/redBackground`
+  </md-block>
+</body>
+
+</html>
